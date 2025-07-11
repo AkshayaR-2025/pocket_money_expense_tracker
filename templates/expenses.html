@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Expenses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">➕ Add Expense</a> |
+            <a href="/expenses">📊 View Expenses</a>
+        </div>
+
+        <h2>📊 Your Expenses</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount (₹)</th>
+                    <th>Note</th>
+                    <th>🗑️</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expense in expenses %}
+                    <tr>
+                        <td>{{ expense[1] }}</td>
+                        <td>{{ expense[2] }}</td>
+                        <td>{{ expense[3] }}</td>
+                        <td>{{ expense[4] }}</td>
+                        <td>
+                            <a href="{{ url_for('delete_expense', id=expense[0]) }}" class="delete-btn">❌</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

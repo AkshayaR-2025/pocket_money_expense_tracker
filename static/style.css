@@ -1,0 +1,110 @@
+/* Background and general layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #ffe6f0, #f9f0ff);
+    padding: 30px;
+    margin: 0;
+}
+
+/* Title */
+h2 {
+    color: #5e4b8b;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #7a4f91;
+    font-weight: bold;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff66b2;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+    border: 2px dashed #ffb6c1;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(to right, #ff66b2, #ff99cc);
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: 0.4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ffb6c1;
+}
+
+/* Table Styling */
+table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(200, 100, 255, 0.1);
+}
+
+th, td {
+    border: 1px solid #e8d5f0;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #e0bbff;
+    color: #4b0082;
+    font-size: 16px;
+}
+
+td {
+    background-color: #fffafc;
+    font-size: 15px;
+}
+
+/* Delete Button */
+form[action^="/delete"] button {
+    background-color: #ff4d88;
+    color: white;
+    font-size: 14px;
+    padding: 8px 14px;
+    width: auto;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+form[action^="/delete"] button:hover {
+    background-color: #cc005f;
+    transform: scale(1.1);
+}
